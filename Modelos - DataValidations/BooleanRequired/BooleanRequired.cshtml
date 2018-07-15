@@ -1,0 +1,25 @@
+﻿@*@{
+	ViewBag.Title = "BooleanRequired";
+}
+@model TrucoTeca.Controllers.ClienteBoolean
+
+<h2>BooleanRequired</h2>
+
+@using (Html.BeginForm()) {
+	
+	@Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>Cliente</legend>
+
+        <div class="editor-field">
+			Seleccionar
+            @Html.EditorFor(model => model.Seleccionar)
+            @Html.ValidationMessageFor(model => model.Seleccionar)
+        </div>
+     
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}*@

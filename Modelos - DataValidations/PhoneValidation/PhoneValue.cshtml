@@ -1,0 +1,32 @@
+﻿@*@{
+	ViewBag.Title = "PhoneValue";
+}
+@model TrucoTeca.Controllers.ClientePhone
+
+<h2>PhoneValue</h2>
+
+@using (Html.BeginForm()) {
+	
+	@Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>Cliente</legend>
+
+        <div class="editor-field">
+			Phone Fix
+            @Html.TextBoxFor( model => model.PhoneFix, new { @maxlength="9" } )
+            @Html.ValidationMessageFor(model => model.PhoneFix)
+        </div>
+     
+		<div class="editor-field">
+			Phone Movile
+            @Html.TextBoxFor( model => model.PhoneMovile, new { @maxlength = "9" } )
+            @Html.ValidationMessageFor(model => model.PhoneMovile)
+        </div>
+
+        <p>
+            <input type="submit" value="Enviar" />
+        </p>
+    </fieldset>
+	
+}*@

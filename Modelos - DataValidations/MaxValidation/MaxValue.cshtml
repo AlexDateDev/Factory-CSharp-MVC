@@ -1,0 +1,61 @@
+﻿@*@{
+	ViewBag.Title = "MaxValue";
+}
+@model TrucoTeca.Controllers.ClienteMax
+
+<h2>MaxValue</h2>
+
+@using (Html.BeginForm()) {
+	
+	@Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>Cliente</legend>
+
+        <div class="editor-field">
+			Un byte (Max=100)
+            @Html.EditorFor(model => model.UnByte)
+            @Html.ValidationMessageFor(model => model.UnByte)
+        </div>
+     
+		<div class="editor-field">
+			Un short (Max=500)
+            @Html.EditorFor(model => model.UnShort)
+            @Html.ValidationMessageFor(model => model.UnShort)
+        </div>
+
+		<div class="editor-field">
+			Un int (Max=20000)
+            @Html.EditorFor(model => model.UnInt)
+            @Html.ValidationMessageFor(model => model.UnInt)
+        </div>
+
+		<div class="editor-field">
+			Un double(Max=49999.99)", 
+            @Html.EditorFor(model => model.UnDouble)
+            @Html.ValidationMessageFor(model => model.UnDouble)
+        </div>
+
+		<div class="editor-field">
+			Un decimal(Max=123.45)
+            @Html.EditorFor(model => model.UnDecimal)
+            @Html.ValidationMessageFor(model => model.UnDecimal)
+        </div>
+
+		<div class="editor-field">
+			Un float(Max=22222.99)
+            @Html.EditorFor(model => model.UnFloat)
+            @Html.ValidationMessageFor(model => model.UnFloat)
+        </div>
+
+		<div class="editor-field">
+			Un long(Max=123456789)
+            @Html.EditorFor(model => model.UnLong)
+            @Html.ValidationMessageFor(model => model.UnLong)
+        </div>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+	
+}*@
